@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: 63af6a06a22c38130054d83301631c2bef44e0457db6ebe57b0b3d8d07a52c0c
+  sha256: e401b62ffa2a359bc6e880804c963d19da731096571475785b28908ee53b6913
 
 build:
   number: 0

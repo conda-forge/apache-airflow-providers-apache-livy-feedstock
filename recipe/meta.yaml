@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: 6e326e17a5ccab670a6a1e9b35eb1093066e1bc60ec903ea3f0e31edd3a79d05
+  sha256: ff2afd1b37d96e68a77de8326bce1e5db12bb65251bbf5106deddaf88d323cf1
 
 build:
   number: 0
@@ -16,12 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
-    - wheel
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
     - apache-airflow-providers-http
 

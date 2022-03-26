@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-livy-{{ version }}.tar.gz
   sha256: 4d73f56b38fc27650660aad01b76f24a8144b288cc96720aa10ccb38e5d398e6
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -35,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Livy for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-livy package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-livy/stable/index.html
   dev_url: https://github.com/apache/airflow/
 

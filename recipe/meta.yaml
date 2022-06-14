@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "2.2.3" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-livy-{{ version }}.tar.gz
-  sha256: 7c2ca359954c645706ad96c61de8e9ea34ce55429559dcf805e99e61418a64b7
+  sha256: c8f44e3cb830f26cc9fe767eeb55981f80dc6f7b2f9efbff7880fed040bd9339
 
 build:
   noarch: python
@@ -21,13 +21,13 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - apache-airflow-providers-http
 
 test:
   imports:
     - airflow.providers.apache.livy
-    - airflow.providers.apache.livy.example_dags
+    - airflow.providers.apache.livy.hooks
   commands:
     - pip check
   requires:

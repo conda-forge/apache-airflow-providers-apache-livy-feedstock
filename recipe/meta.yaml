@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-livy-{{ version }}.tar.gz
-  sha256: 2fe74ea5adde82581f8bf762e449bac0e8cc5119d5c6db39b2835d24dbb1c9d8
+  sha256: d4e72bed36a4b0a440405328410247f600eedc1edf49cff00d140209225b2ef2
 
 build:
   noarch: python

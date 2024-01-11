@@ -24,7 +24,8 @@ requirements:
     - python >=3.8
     - aiohttp
     - apache-airflow-providers-http
-    - apache-airflow >=2.6.0
+    # constraining to >=2.7.3 for now because of bad pendulum constrain in <=2.7.2
+    - apache-airflow >=2.7.3
     - asgiref
 
 test:

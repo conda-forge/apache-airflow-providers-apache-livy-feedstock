@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "3.7.1" %}
+{% set version = "3.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_livy-{{ version }}.tar.gz
-  sha256: ba7e66cfd456639ad60a398eb566632b904aba33f0796a331768561543282e4a
+  sha256: 64ffef60fc980e59e3a1103c84e55e3b5df95ea4afd641f51ad063d1484554db
 
 build:
   noarch: python
@@ -22,10 +22,10 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - aiohttp
+    - aiohttp >=3.9.2
     - apache-airflow-providers-http
     # constraining to >=2.7.3 for now because of bad pendulum constrain in <=2.7.2
-    - apache-airflow >=2.7.3
+    - apache-airflow >=2.6.0
     - asgiref
 
 test:

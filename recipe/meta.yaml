@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "3.9.1" %}
+{% set version = "3.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_livy-{{ version }}.tar.gz
-  sha256: 8ddf18247a4bdcc97902a2c36de1a37462a08a2677127015b2d6b6ff7766955d
+  sha256: bcd913f366137bc1ad854d798e482e598a94b54215d522c24f4ff6d126612681
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - aiohttp >=3.9.2
     - apache-airflow-providers-http
     - apache-airflow >=2.8.0
-    - asgiref
+    - asgiref >=2.3.0
 
 test:
   imports:

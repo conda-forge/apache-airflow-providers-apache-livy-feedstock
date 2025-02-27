@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "4.0.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_livy-{{ version }}.tar.gz
-  sha256: 6455088ee7f1e8aa1a56e0d871c532c0f0262f0bd01f7728929274f9a20faf45
+  sha256: a21a7ebe6b395aa552f220fea91f4e49fbd2dabe48a1d9abe38352b5849c383e
 
 build:
   noarch: python
@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
-    - aiohttp >=3.9.2
-    - apache-airflow-providers-http
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-http >=5.1.0
+    - aiohttp >=3.9.2
     - asgiref >=2.3.0
 
 test:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-livy for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/apache/livy/LICENSE
+  license_file: src/airflow/providers/apache/livy/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-livy/stable/index.html
   dev_url: https://github.com/apache/airflow/

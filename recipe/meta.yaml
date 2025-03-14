@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_livy-{{ version }}.tar.gz
-  sha256: a21a7ebe6b395aa552f220fea91f4e49fbd2dabe48a1d9abe38352b5849c383e
+  sha256: 68b494376b7ad55606dc4d6d51388d65297d7ed1908dc7f92ef68a430b7701f2
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.1
+    - flit-core ==3.11.0
     - pip
   run:
     - python >={{ python_min }},<4.dev0

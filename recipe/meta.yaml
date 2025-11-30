@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-livy" %}
-{% set version = "4.4.5" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_livy-{{ version }}.tar.gz
-  sha256: db9cbd0983a17883173caa99fbcdeceb5a6d7c2680cb2bdc0e04cd5da18407dc
+  sha256: a4f04a2cf5da57a5b44ea0507399069ea7b25eb63404ffdf37846816a2c90bce
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - apache-airflow-providers-http >=5.1.0
     - apache-airflow-providers-common-compat >=1.8.0
     - aiohttp >=3.9.2

@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-livy
-  version: "4.5.3"
+  version: 4.5.3
 
 package:
   name: ${{ name|lower }}
@@ -27,7 +27,6 @@ requirements:
     - apache-airflow-providers-common-compat >=1.12.0
     - aiohttp >=3.9.2
     - asgiref >=2.3.0
-
 tests:
   - python:
       imports:

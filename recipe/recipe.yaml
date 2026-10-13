@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-livy
-  version: "4.6.2"
+  version: "4.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_livy-${{ version }}.tar.gz
-  sha256: d8a347a1d2ea904e4cc7c99c368242f2bd80d50d3e6a0cf8ace447b4c271ead4
+  sha256: 01fee44510de169243ee783540093a0819112d0067556e416b9e397be2d8e2df
 
 build:
   noarch: python
